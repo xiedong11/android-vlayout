@@ -23,6 +23,12 @@ public class LinearLayoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_linear_layout);
         rvList = findViewById(R.id.rv_list);
+        initLinearLayout();
+
+
+    }
+
+    private void initLinearLayout() {
         VirtualLayoutManager layoutManager = new VirtualLayoutManager(this);
         rvList.setLayoutManager(layoutManager);
 
@@ -46,7 +52,5 @@ public class LinearLayoutActivity extends AppCompatActivity {
         }
         adapter.addAdapter(new LinearAdapter(linearHelper, this, datas));
         rvList.setAdapter(adapter);
-
-
     }
 }
