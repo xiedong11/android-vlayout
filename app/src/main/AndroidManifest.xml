@@ -20,7 +20,8 @@
         <activity android:name=".activity.GridLayoutActivity" />
         <activity android:name=".activity.FixLayoutActivity" />
         <activity android:name=".activity.ScrollFixLayoutActivity" />
-        <activity android:name=".activity.FloatLayoutActivity"></activity>
+        <activity android:name=".activity.FloatLayoutActivity" />
+        <activity android:name=".activity.ColumnLayoutActivity"></activity>
     </application>
 
 </manifest>

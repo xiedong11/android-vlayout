@@ -37,4 +37,10 @@
         android:layout_height="wrap_content"
         android:text="浮动布局（FloatLayoutHelper）" />
 
+    <Button
+        android:id="@+id/btn_column"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="栏格布局（ColumnLayoutHelper)" />
+
 </LinearLayout>
