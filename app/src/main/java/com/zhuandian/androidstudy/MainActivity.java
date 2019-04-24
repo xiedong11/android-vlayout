@@ -14,6 +14,7 @@ import com.zhuandian.androidstudy.activity.LinearLayoutActivity;
 import com.zhuandian.androidstudy.activity.OnePlusNLayoutActivity;
 import com.zhuandian.androidstudy.activity.ScrollFixLayoutActivity;
 import com.zhuandian.androidstudy.activity.SingleLayoutActivity;
+import com.zhuandian.androidstudy.activity.StickLayoutActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_column).setOnClickListener(this);
         findViewById(R.id.btn_single).setOnClickListener(this);
         findViewById(R.id.btn_one_plus_n).setOnClickListener(this);
+        findViewById(R.id.btn_stick_layout).setOnClickListener(this);
 
     }
 
@@ -55,9 +57,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_column:
                 startActivity(new Intent(MainActivity.this, ColumnLayoutActivity.class));
                 break;
+            case R.id.btn_single:
+                startActivity(new Intent(MainActivity.this, SingleLayoutActivity.class));
+                break;
             case R.id.btn_one_plus_n:
                 startActivity(new Intent(MainActivity.this, OnePlusNLayoutActivity.class));
                 break;
+            case R.id.btn_stick_layout:
+                startActivity(new Intent(MainActivity.this, StickLayoutActivity.class));
+                break;
+
         }
     }
 }

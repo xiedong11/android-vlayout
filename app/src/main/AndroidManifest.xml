@@ -23,7 +23,8 @@
         <activity android:name=".activity.FloatLayoutActivity" />
         <activity android:name=".activity.ColumnLayoutActivity" />
         <activity android:name=".activity.SingleLayoutActivity" />
-        <activity android:name=".activity.OnePlusNLayoutActivity"></activity>
+        <activity android:name=".activity.OnePlusNLayoutActivity" />
+        <activity android:name=".activity.StickLayoutActivity"></activity>
     </application>
 
 </manifest>

@@ -55,4 +55,11 @@
         android:layout_height="wrap_content"
         android:text="一拖N布局 （OnePlusNLayoutHelper）" />
 
+
+    <Button
+        android:id="@+id/btn_stick_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="吸边布局（StickyLayoutHelper）" />
+
 </LinearLayout>

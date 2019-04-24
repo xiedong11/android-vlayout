@@ -65,6 +65,5 @@ public class OnePlusNLayoutActivity extends AppCompatActivity {
         }
 
         delegateAdapter.addAdapter(new CommonAdapter(onePlusNLayoutHelper, this, datas));
-        rvList.setAdapter(delegateAdapter);
     }
 }
