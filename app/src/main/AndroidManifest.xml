@@ -22,7 +22,8 @@
         <activity android:name=".activity.ScrollFixLayoutActivity" />
         <activity android:name=".activity.FloatLayoutActivity" />
         <activity android:name=".activity.ColumnLayoutActivity" />
-        <activity android:name=".activity.SingleLayoutActivity"></activity>
+        <activity android:name=".activity.SingleLayoutActivity" />
+        <activity android:name=".activity.OnePlusNLayoutActivity"></activity>
     </application>
 
 </manifest>

@@ -5,13 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.alibaba.android.vlayout.layout.FixLayoutHelper;
-import com.alibaba.android.vlayout.layout.ScrollFixLayoutHelper;
+
 import com.zhuandian.androidstudy.activity.ColumnLayoutActivity;
 import com.zhuandian.androidstudy.activity.FixLayoutActivity;
 import com.zhuandian.androidstudy.activity.FloatLayoutActivity;
 import com.zhuandian.androidstudy.activity.GridLayoutActivity;
 import com.zhuandian.androidstudy.activity.LinearLayoutActivity;
+import com.zhuandian.androidstudy.activity.OnePlusNLayoutActivity;
 import com.zhuandian.androidstudy.activity.ScrollFixLayoutActivity;
 import com.zhuandian.androidstudy.activity.SingleLayoutActivity;
 
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_float).setOnClickListener(this);
         findViewById(R.id.btn_column).setOnClickListener(this);
         findViewById(R.id.btn_single).setOnClickListener(this);
+        findViewById(R.id.btn_one_plus_n).setOnClickListener(this);
 
     }
 
@@ -54,8 +55,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_column:
                 startActivity(new Intent(MainActivity.this, ColumnLayoutActivity.class));
                 break;
-            case R.id.btn_single:
-                startActivity(new Intent(MainActivity.this, SingleLayoutActivity.class));
+            case R.id.btn_one_plus_n:
+                startActivity(new Intent(MainActivity.this, OnePlusNLayoutActivity.class));
                 break;
         }
     }
