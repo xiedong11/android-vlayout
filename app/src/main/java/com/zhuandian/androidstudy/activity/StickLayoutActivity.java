@@ -16,6 +16,13 @@ import com.zhuandian.androidstudy.adapter.CommonAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 布局说明：布局只有一个Item，显示逻辑如下：
+ * 当它包含的组件处于屏幕可见范围内时，像正常的组件一样随页面滚动而滚动
+ * 当组件将要被滑出屏幕返回的时候，可以吸到屏幕的顶部或者底部，实现一种吸住的效果
+ *
+ *
+ */
 public class StickLayoutActivity extends AppCompatActivity {
 
     private RecyclerView rvList;

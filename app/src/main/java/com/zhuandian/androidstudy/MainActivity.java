@@ -14,6 +14,7 @@ import com.zhuandian.androidstudy.activity.LinearLayoutActivity;
 import com.zhuandian.androidstudy.activity.OnePlusNLayoutActivity;
 import com.zhuandian.androidstudy.activity.ScrollFixLayoutActivity;
 import com.zhuandian.androidstudy.activity.SingleLayoutActivity;
+import com.zhuandian.androidstudy.activity.StaggeredGridLayoutActivity;
 import com.zhuandian.androidstudy.activity.StickLayoutActivity;
 
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_single).setOnClickListener(this);
         findViewById(R.id.btn_one_plus_n).setOnClickListener(this);
         findViewById(R.id.btn_stick_layout).setOnClickListener(this);
+        findViewById(R.id.btn_staggered_grid).setOnClickListener(this);
 
     }
 
@@ -66,6 +68,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_stick_layout:
                 startActivity(new Intent(MainActivity.this, StickLayoutActivity.class));
                 break;
+            case R.id.btn_staggered_grid:
+                startActivity(new Intent(MainActivity.this, StaggeredGridLayoutActivity.class));
+                break;
+
 
         }
     }

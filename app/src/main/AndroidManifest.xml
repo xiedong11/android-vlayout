@@ -24,7 +24,8 @@
         <activity android:name=".activity.ColumnLayoutActivity" />
         <activity android:name=".activity.SingleLayoutActivity" />
         <activity android:name=".activity.OnePlusNLayoutActivity" />
-        <activity android:name=".activity.StickLayoutActivity"></activity>
+        <activity android:name=".activity.StickLayoutActivity" />
+        <activity android:name=".activity.StaggeredGridLayoutActivity"></activity>
     </application>
 
 </manifest>
