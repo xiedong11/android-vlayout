@@ -4,14 +4,13 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import com.alibaba.android.vlayout.DelegateAdapter;
 import com.alibaba.android.vlayout.VirtualLayoutManager;
 import com.alibaba.android.vlayout.layout.FixLayoutHelper;
 import com.alibaba.android.vlayout.layout.LinearLayoutHelper;
 import com.zhuandian.androidstudy.R;
-import com.zhuandian.androidstudy.adapter.LinearAdapter;
+import com.zhuandian.androidstudy.adapter.CommonAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +67,7 @@ public class FixLayoutActivity extends AppCompatActivity {
         for (int i = 0; i < 10; i++) {
             datas.add("Item  " + i);
         }
-        adapter.addAdapter(new LinearAdapter(fixLayoutHelper, this, datas));
+        adapter.addAdapter(new CommonAdapter(fixLayoutHelper, this, datas));
         rvList.setAdapter(adapter);
 
     }
@@ -93,7 +92,7 @@ public class FixLayoutActivity extends AppCompatActivity {
         for (int i = 0; i < 10; i++) {
             datas.add("Item  " + i);
         }
-        adapter.addAdapter(new LinearAdapter(linearHelper, this, datas));
+        adapter.addAdapter(new CommonAdapter(linearHelper, this, datas));
         rvList.setAdapter(adapter);
     }
 }

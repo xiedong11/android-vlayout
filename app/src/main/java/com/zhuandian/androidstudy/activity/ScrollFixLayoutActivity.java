@@ -11,7 +11,7 @@ import com.alibaba.android.vlayout.layout.FixLayoutHelper;
 import com.alibaba.android.vlayout.layout.LinearLayoutHelper;
 import com.alibaba.android.vlayout.layout.ScrollFixLayoutHelper;
 import com.zhuandian.androidstudy.R;
-import com.zhuandian.androidstudy.adapter.LinearAdapter;
+import com.zhuandian.androidstudy.adapter.CommonAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,7 +80,7 @@ public class ScrollFixLayoutActivity extends AppCompatActivity {
         for (int i = 0; i < 10; i++) {
             datas.add("Item  " + i);
         }
-        adapters.add(new LinearAdapter(scrollFixLayoutHelper, this, datas));
+        adapters.add(new CommonAdapter(scrollFixLayoutHelper, this, datas));
 //        rvList.setAdapter(adapter);
     }
 
@@ -103,7 +103,7 @@ public class ScrollFixLayoutActivity extends AppCompatActivity {
         for (int i = 0; i < 20; i++) {
             datas.add("Item  " + i);
         }
-        adapters.add(new LinearAdapter(linearHelper, this, datas));
+        adapters.add(new CommonAdapter(linearHelper, this, datas));
 //        rvList.setAdapter(adapter);
     }
 }

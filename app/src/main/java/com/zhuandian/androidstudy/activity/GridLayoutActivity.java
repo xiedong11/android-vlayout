@@ -4,13 +4,12 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import com.alibaba.android.vlayout.DelegateAdapter;
 import com.alibaba.android.vlayout.VirtualLayoutManager;
 import com.alibaba.android.vlayout.layout.GridLayoutHelper;
 import com.zhuandian.androidstudy.R;
-import com.zhuandian.androidstudy.adapter.LinearAdapter;
+import com.zhuandian.androidstudy.adapter.CommonAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,7 +66,7 @@ public class GridLayoutActivity extends AppCompatActivity {
             datas.add("Item  " + i);
         }
 
-        adapter.addAdapter(new LinearAdapter(gridLayoutHelper, this, datas));
+        adapter.addAdapter(new CommonAdapter(gridLayoutHelper, this, datas));
         rvList.setAdapter(adapter);
 
 

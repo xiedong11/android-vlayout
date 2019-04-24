@@ -18,12 +18,12 @@ import java.util.List;
  * author：xiedong
  * date：2019/4/23
  */
-public class LinearAdapter extends DelegateAdapter.Adapter<LinearAdapter.ViewHolder> {
+public class CommonAdapter extends DelegateAdapter.Adapter<CommonAdapter.ViewHolder> {
     LayoutHelper layoutHelper;
     Context context;
     List<String> datas;
 
-    public LinearAdapter(LayoutHelper layoutHelper, Context context, List<String> datas) {
+    public CommonAdapter(LayoutHelper layoutHelper, Context context, List<String> datas) {
         this.layoutHelper = layoutHelper;
         this.context = context;
         this.datas = datas;
@@ -35,12 +35,12 @@ public class LinearAdapter extends DelegateAdapter.Adapter<LinearAdapter.ViewHol
     }
 
     @Override
-    public LinearAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CommonAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_view, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(LinearAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(CommonAdapter.ViewHolder holder, int position) {
         holder.textView.setText(datas.get(position));
     }
 

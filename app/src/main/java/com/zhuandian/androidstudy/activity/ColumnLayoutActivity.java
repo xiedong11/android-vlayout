@@ -9,7 +9,7 @@ import com.alibaba.android.vlayout.DelegateAdapter;
 import com.alibaba.android.vlayout.VirtualLayoutManager;
 import com.alibaba.android.vlayout.layout.ColumnLayoutHelper;
 import com.zhuandian.androidstudy.R;
-import com.zhuandian.androidstudy.adapter.LinearAdapter;
+import com.zhuandian.androidstudy.adapter.CommonAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +59,7 @@ public class ColumnLayoutActivity extends AppCompatActivity {
             datas.add("Item  " + i);
         }
 
-        delegateAdapter.addAdapter(new LinearAdapter(columnLayoutHelper, this, datas));
+        delegateAdapter.addAdapter(new CommonAdapter(columnLayoutHelper, this, datas));
         rvList.setAdapter(delegateAdapter);
     }
 }

@@ -11,7 +11,7 @@ import com.alibaba.android.vlayout.layout.FixLayoutHelper;
 import com.alibaba.android.vlayout.layout.FloatLayoutHelper;
 import com.alibaba.android.vlayout.layout.LinearLayoutHelper;
 import com.zhuandian.androidstudy.R;
-import com.zhuandian.androidstudy.adapter.LinearAdapter;
+import com.zhuandian.androidstudy.adapter.CommonAdapter;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -57,7 +57,7 @@ public class FloatLayoutActivity extends AppCompatActivity {
         List<String> datas = new ArrayList<>();
 
         datas.add("浮动布局View");
-        adapters.add(new LinearAdapter(new FloatLayoutHelper(), this, datas));
+        adapters.add(new CommonAdapter(new FloatLayoutHelper(), this, datas));
 
     }
 
@@ -79,7 +79,7 @@ public class FloatLayoutActivity extends AppCompatActivity {
         for (int i = 0; i < 10; i++) {
             datas.add("Item  " + i);
         }
-        adapters.add(new LinearAdapter(linearHelper, this, datas));
+        adapters.add(new CommonAdapter(linearHelper, this, datas));
 
 
 
