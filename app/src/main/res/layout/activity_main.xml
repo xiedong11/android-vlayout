@@ -25,4 +25,10 @@
         android:layout_height="wrap_content"
         android:text="FixLayout(固定布局)" />
 
+    <Button
+        android:id="@+id/btn_scroll_fix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FixLayout(可选显示固定布局)" />
+
 </LinearLayout>

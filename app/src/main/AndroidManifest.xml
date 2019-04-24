@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".activity.LinearLayoutActivity" />
         <activity android:name=".activity.GridLayoutActivity" />
-        <activity android:name=".activity.FixLayoutActivity"></activity>
+        <activity android:name=".activity.FixLayoutActivity" />
+        <activity android:name=".activity.ScrollFixLayoutActivity"></activity>
     </application>
 
 </manifest>
