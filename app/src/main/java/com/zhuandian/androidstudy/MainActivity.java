@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.alibaba.android.vlayout.layout.FixLayoutHelper;
+import com.alibaba.android.vlayout.layout.ScrollFixLayoutHelper;
 import com.zhuandian.androidstudy.activity.FixLayoutActivity;
+import com.zhuandian.androidstudy.activity.FloatLayoutActivity;
 import com.zhuandian.androidstudy.activity.GridLayoutActivity;
 import com.zhuandian.androidstudy.activity.LinearLayoutActivity;
 import com.zhuandian.androidstudy.activity.ScrollFixLayoutActivity;
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_grid).setOnClickListener(this);
         findViewById(R.id.btn_fix).setOnClickListener(this);
         findViewById(R.id.btn_scroll_fix).setOnClickListener(this);
+        findViewById(R.id.btn_float).setOnClickListener(this);
 
     }
 
@@ -40,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_scroll_fix:
                 startActivity(new Intent(MainActivity.this, ScrollFixLayoutActivity.class));
+                break;
+            case R.id.btn_float:
+                startActivity(new Intent(MainActivity.this, FloatLayoutActivity.class));
                 break;
         }
     }

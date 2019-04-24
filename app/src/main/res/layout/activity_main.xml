@@ -31,4 +31,10 @@
         android:layout_height="wrap_content"
         android:text="FixLayout(可选显示固定布局)" />
 
+    <Button
+        android:id="@+id/btn_float"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="浮动布局（FloatLayoutHelper）" />
+
 </LinearLayout>
