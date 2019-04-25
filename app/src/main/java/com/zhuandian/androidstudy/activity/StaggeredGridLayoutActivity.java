@@ -1,9 +1,11 @@
 package com.zhuandian.androidstudy.activity;
 
 import android.graphics.Color;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.view.ViewGroup;
 
 import com.alibaba.android.vlayout.DelegateAdapter;
 import com.alibaba.android.vlayout.VirtualLayoutManager;
@@ -59,6 +61,17 @@ public class StaggeredGridLayoutActivity extends AppCompatActivity {
             datas.add("Item " + i);
         }
 
-        delegateAdapter.addAdapter(new CommonAdapter(staggeredGridLayoutHelper, this, datas));
+        delegateAdapter.addAdapter(new CommonAdapter(staggeredGridLayoutHelper, this, datas) {
+
+            //重写onBindViewHolder，重新设置部分Item的高度，模拟瀑布流效果
+            @Override
+            public void onBindViewHolder(CommonAdapter.ViewHolder holder, int position) {
+                super.onBindViewHolder(holder, position);
+                if (position % 2 == 0) {
+                    holder.textView.setLayoutParams(new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT, 800));
+                }
+
+            }
+        });
     }
 }

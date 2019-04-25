@@ -49,8 +49,8 @@ public class CommonAdapter extends DelegateAdapter.Adapter<CommonAdapter.ViewHol
         return datas.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
-        TextView textView;
+   public class ViewHolder extends RecyclerView.ViewHolder {
+        public TextView textView;
 
         public ViewHolder(View itemView) {
             super(itemView);
