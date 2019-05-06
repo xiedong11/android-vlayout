@@ -1,71 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_linear"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LinearLayout" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_grid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="GridLayout" />
+        <Button
+            android:id="@+id/btn_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LinearLayout" />
 
-    <Button
-        android:id="@+id/btn_fix"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="FixLayout(固定布局)" />
-
-    <Button
-        android:id="@+id/btn_scroll_fix"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="FixLayout(可选显示固定布局)" />
-
-    <Button
-        android:id="@+id/btn_float"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="浮动布局（FloatLayoutHelper）" />
-
-    <Button
-        android:id="@+id/btn_column"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="栏格布局（ColumnLayoutHelper)" />
-
-    <Button
-        android:id="@+id/btn_single"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="通栏布局（SingleLayoutHelper）" />
-
-    <Button
-        android:id="@+id/btn_one_plus_n"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="一拖N布局 （OnePlusNLayoutHelper）" />
+        <Button
+            android:id="@+id/btn_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View" />
 
 
-    <Button
-        android:id="@+id/btn_stick_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="吸边布局（StickyLayoutHelper）" />
-
-    <Button
-        android:id="@+id/btn_staggered_grid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="瀑布流布局（StaggeredGridLayoutHelper）" />
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

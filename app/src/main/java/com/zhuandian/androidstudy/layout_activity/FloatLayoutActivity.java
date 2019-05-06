@@ -1,4 +1,4 @@
-package com.zhuandian.androidstudy.activity;
+package com.zhuandian.androidstudy.layout_activity;
 
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;

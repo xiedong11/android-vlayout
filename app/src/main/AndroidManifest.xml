@@ -16,16 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.LinearLayoutActivity" />
-        <activity android:name=".activity.GridLayoutActivity" />
-        <activity android:name=".activity.FixLayoutActivity" />
-        <activity android:name=".activity.ScrollFixLayoutActivity" />
-        <activity android:name=".activity.FloatLayoutActivity" />
-        <activity android:name=".activity.ColumnLayoutActivity" />
-        <activity android:name=".activity.SingleLayoutActivity" />
-        <activity android:name=".activity.OnePlusNLayoutActivity" />
-        <activity android:name=".activity.StickLayoutActivity" />
-        <activity android:name=".activity.StaggeredGridLayoutActivity"></activity>
+        <activity android:name=".layout_activity.LinearLayoutActivity" />
+        <activity android:name=".layout_activity.GridLayoutActivity" />
+        <activity android:name=".layout_activity.FixLayoutActivity" />
+        <activity android:name=".layout_activity.ScrollFixLayoutActivity" />
+        <activity android:name=".layout_activity.FloatLayoutActivity" />
+        <activity android:name=".layout_activity.ColumnLayoutActivity" />
+        <activity android:name=".layout_activity.SingleLayoutActivity" />
+        <activity android:name=".layout_activity.OnePlusNLayoutActivity" />
+        <activity android:name=".layout_activity.StickLayoutActivity" />
+        <activity android:name=".layout_activity.StaggeredGridLayoutActivity" />
+        <activity android:name=".layout_activity.AllLayoutHelperActivity" />
+        <activity android:name=".layout_activity.LayoutMainActivity" />
+        <activity android:name=".view.ViewMainActivity"></activity>
     </application>
 
 </manifest>
