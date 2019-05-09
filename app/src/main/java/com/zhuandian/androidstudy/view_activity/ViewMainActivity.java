@@ -1,4 +1,4 @@
-package com.zhuandian.androidstudy.view;
+package com.zhuandian.androidstudy.view_activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

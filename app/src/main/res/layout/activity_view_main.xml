@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ViewMainActivity">
+    tools:context=".view_activity.ViewMainActivity">
 
+    <com.zhuandian.androidstudy.view_activity.view.MyView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="#faf" />
 </android.support.constraint.ConstraintLayout>
