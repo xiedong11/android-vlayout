@@ -202,6 +202,7 @@ public class BannerViewGroup extends ViewGroup {
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
+                stopAutoPlay(); //解决手指按下时banner仍然自动轮播
                 if (!scroller.isFinished()) {
                     scroller.abortAnimation();
                 }
@@ -214,6 +215,7 @@ public class BannerViewGroup extends ViewGroup {
                 oldX = currentX; //重新赋值oldX
                 break;
             case MotionEvent.ACTION_UP:
+                startAutoPlay();
                 int scrollX = getScrollX();
                 currentIndex = (scrollX + childrenWidth / 2) / childrenWidth;
                 if (currentIndex < 0) {
@@ -222,11 +224,12 @@ public class BannerViewGroup extends ViewGroup {
                     currentIndex = childrenCount - 1;
                 }
 
+                //1.利用scroller完成轮播
                 int dx = currentIndex * childrenWidth - scrollX;
                 scroller.startScroll(scrollX, 0, dx, 0);
                 postInvalidate();
 
-
+                 //1.利用scrollTo完成轮播
 //                scrollTo(currentIndex * childrenWidth, 0);
                 break;
             case MotionEvent.ACTION_CANCEL:
