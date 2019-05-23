@@ -15,6 +15,9 @@ public class BannerViewGroup extends ViewGroup {
     private int childrenCount;
     private int childrenWidth;
     private int childernHeight;
+    private int oldX;
+    private int currentIndex;  //当前子view索引
+
 
     public BannerViewGroup(Context context) {
         this(context, null);
@@ -76,10 +79,6 @@ public class BannerViewGroup extends ViewGroup {
     }
 
 
-
-
-
-
     /**
      * 事件传递： 事件传递过程中，我们需要复写父类的onInterceptTouchEvent方法，来确定当前事件是否被该ViewGroup拦截处理
      * 如果返回true，则当前ViewGoup拦截事件，事件将不会继续传递，会交由当前ViewGroup的onTouch方法处理
@@ -91,14 +90,45 @@ public class BannerViewGroup extends ViewGroup {
         return true; //消费事件，在当前ViewGroup处理
     }
 
+
+    /**
+     * 借助ScrollTo、ScrollBy实现手动轮播
+     *
+     * 一、我们在滑动屏幕图片的过程中，其实就是我们自定义ViewGroup的子视图移动的过程。所以我们只需要知道滑动之前的横坐标跟滑动之后的横坐标
+     *     此时我们就可以通过前后坐标的差值得到此过程的移动的距离， 我们再利用ScrollBy方法实现图片的滑动，所以此时，需要我们求出的两个值为
+     *     移动之前、移动之后的横坐标
+     *
+     * 二、在我们 第一次 按下的那一瞬间，此时的移动之前和移动之后的值是相等的，也就是此时按下的那一瞬间的哪一个点的横坐标的值
+     *
+     * 三、我们在不断的滑动过程中，是会不断的调用ACTION_MOVE方法，那么此时我们就应该讲 移动之前的值 和移动之后的值保存，以便我们能计算得出滑动的距离
+     *
+     * 四、在我们 抬起的那一瞬间 ，此次手指拖动完成，我们此时需要计算出我们此时将要 滑动到哪张图片上
+     *
+     *   （我们当前ViewGroup的滑动位置 + 每一张图片的宽度 /2 ）/每一张图片的宽度值
+     *
+     *   然后再利用ScrollTo方法，滑动到该图片的位置上
+     */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
+                oldX = (int) event.getX();
                 break;
             case MotionEvent.ACTION_MOVE:
+                int currentX = (int) event.getX();
+                int distance = currentX - oldX;
+                scrollBy(-distance, 0); //只在X轴上发生偏移，Y轴不变
+                oldX = currentX; //重新赋值oldX
                 break;
             case MotionEvent.ACTION_UP:
+                int scrollX = getScrollX();
+                currentIndex = (scrollX + childrenWidth / 2) / childrenWidth;
+                if (currentIndex < 0) {
+                    currentIndex = 0;
+                } else if (currentIndex > childrenCount - 1) {
+                    currentIndex = childrenCount - 1;
+                }
+                scrollTo(currentIndex * childrenWidth, 0);
                 break;
             case MotionEvent.ACTION_CANCEL:
                 break;

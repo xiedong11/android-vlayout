@@ -13,20 +13,22 @@
         android:background="#faf" />
 
     <com.zhuandian.androidstudy.view_activity.view.banner.BannerViewGroup
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:background="@color/colorPrimary"
-            android:layout_width="80dp"
-            android:layout_height="80dp" />
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimary" />
+
         <TextView
-            android:background="@color/colorPrimary"
-            android:layout_width="80dp"
-            android:layout_height="80dp" />
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorAccent" />
+
         <TextView
-            android:background="@color/colorPrimary"
-            android:layout_width="80dp"
-            android:layout_height="80dp" />
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimary" />
     </com.zhuandian.androidstudy.view_activity.view.banner.BannerViewGroup>
 </LinearLayout>
