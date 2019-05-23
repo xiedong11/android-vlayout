@@ -1,11 +1,16 @@
 package com.zhuandian.androidstudy.view_activity.view.banner;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Scroller;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * desc :我们在自定义viewGroup中，必须实现的方法有：测量-》布局-》绘制
@@ -20,6 +25,32 @@ public class BannerViewGroup extends ViewGroup {
     private int currentIndex;  //当前子view索引
     private Scroller scroller;
 
+    //自动轮播
+    private boolean isAutoPlay = true; //默认开启
+    private static final int SEND_START_BANNER_MESSAGE = 1;
+    private Timer timer = new Timer();
+    private TimerTask timerTask;
+    private Handler autoHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case SEND_START_BANNER_MESSAGE:
+                    if (++currentIndex > childrenCount - 1) {
+                        currentIndex = 0;
+                    }
+                    scrollTo(currentIndex * childrenWidth, 0);
+                    break;
+            }
+        }
+    };
+
+    private void startAutoPlay() {
+        isAutoPlay = true;
+    }
+
+    private void stopAutoPlay() {
+        isAutoPlay = false;
+    }
 
     public BannerViewGroup(Context context) {
         this(context, null);
@@ -31,11 +62,21 @@ public class BannerViewGroup extends ViewGroup {
 
     public BannerViewGroup(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initScroller();
+        initConfig();
     }
 
-    private void initScroller() {
+    private void initConfig() {
         scroller = new Scroller(getContext());
+
+        timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                if (isAutoPlay) {
+                    autoHandler.sendEmptyMessage(SEND_START_BANNER_MESSAGE);
+                }
+            }
+        };
+        timer.schedule(timerTask, 500, 2000);
     }
 
     @Override
